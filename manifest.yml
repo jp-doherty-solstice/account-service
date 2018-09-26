@@ -1,3 +1,12 @@
 applications:
 - name: account-service
   path: ./build/libs/account-service-0.0.1-SNAPSHOT.jar
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: account-service-insightful-hyena.cfapps.io
+  services:
+  - account-mysql
+  - service-registry
+  stack: cflinuxfs2
