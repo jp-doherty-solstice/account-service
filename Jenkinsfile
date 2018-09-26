@@ -10,7 +10,7 @@ pipeline {
          }
          stage('Deploy'){
             steps{
-                sh 'cf push account-service -p ./build/libs/account-service-0.0.1-SNAPSHOT.jar'
+                pushToCloudFoundry cloudSpace: 'jpdoherty-cnt', credentialsId: 'ede9b831-3f97-4e71-90a6-4356042f4a70', organization: 'solstice-org', target: 'https://api.run.pivotal.io'
             }
          }
       }
