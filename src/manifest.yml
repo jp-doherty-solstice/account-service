@@ -1,3 +1,0 @@
-applications:
-  name: account-service
-  path: ./build/libs/account-service-0.0.1-SNAPSHOT.jar
